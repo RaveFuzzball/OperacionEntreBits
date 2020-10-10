@@ -44,7 +44,7 @@ public abstract class Empleado extends Usuario {
     public void verInformacionPersonal() {
         System.out.println("Nombre: " + nombre + " " + apellidos);
         System.out.println("Genero: " + genero + "  Escolaridad: " + escolaridad);
-        System.out.println("Fecha Nacimiento: " + fechaNacimiento + "  Direccion: " + direccion);
+        System.out.println("Fecha Nacimiento: " + fechaNacimiento.get(Calendar.DATE) + "/" + fechaNacimiento.get(Calendar.MONTH) + "/" + fechaNacimiento.get(Calendar.YEAR) + "  Direccion: " + direccion);
         System.out.println("Puesto: " + puesto + "  Salario: " + salario);
         System.out.println("Telefono: " + telefono);
     }
