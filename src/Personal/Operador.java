@@ -16,12 +16,9 @@ public class Operador extends Empleado {
 
     static int numOperadores;
 
-    static void incNumOperadores() {
-        numOperadores++;
-    }
-
     public Operador(String nombre, String apellidos,Calendar fechaNacimiento, String genero, String escolaridad, String direccion, float salario, String puesto, String telefono, String nombreUsuario, String constraseña,Identificador id) {
         super(nombre, apellidos,fechaNacimiento, genero, escolaridad, direccion, salario, puesto, telefono, nombreUsuario, constraseña, id);
+        numOperadores++;
     }
 
     @Override
@@ -30,6 +27,7 @@ public class Operador extends Empleado {
         do {
             System.out.println("¿Que desea hacaer?");
             System.out.println("1.Ver Informe de Trabajador \n2.Ver datos del empleado \n3.Solicitar Cambio de Tienda \n4.Asignar Vacaciones \n5.Dar de alta \n6.Regresar");
+            System.out.println("Opcion seleccionada: ");
             Scanner opcion = new Scanner(System.in);
             opcionSeleccionada = opcion.nextInt();
             switch (opcionSeleccionada) {
