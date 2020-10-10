@@ -11,7 +11,7 @@ package Personal;
  */
 import java.util.Calendar;
 
-public class Empleado extends Usuario {
+public abstract class Empleado extends Usuario {
 
     protected String nombre;
     protected String apellidos;
@@ -23,14 +23,14 @@ public class Empleado extends Usuario {
     protected String puesto;
     protected String telefono;
 
-    public Empleado(String nombre, String apellidos, Calendar fechaNacimiento, 
-            String genero, String escolaridad, String direccion, float salario, 
-            String puesto, String telefono, String nombreUsuario, String constraseña, Identificador id) {
-        
-        super(nombreUsuario, constraseña,id);
+    public Empleado(String nombre, String apellidos,/*Calendar fechaNacimiento,*/
+            String genero, String escolaridad, String direccion, float salario,
+            String puesto, String telefono, String nombreUsuario, String constraseña/*, Identificador id*/) {
+
+        super(nombreUsuario, constraseña /*,id*/);
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.fechaNacimiento = fechaNacimiento;
+        //this.fechaNacimiento = fechaNacimiento;
         this.genero = genero;
         this.escolaridad = escolaridad;
         this.direccion = direccion;
@@ -38,8 +38,11 @@ public class Empleado extends Usuario {
         this.puesto = puesto;
         this.telefono = telefono;
     }
-    
-    public void mostrarMenu(){
-        
+
+    public abstract void mostrarMenu();
+
+    public void verInformacionPersonal() {
+        System.out.println("Nombre: " + nombre + " " + apellidos);
+        System.out.println("Genero: " + genero + " Escolaridad: " + escolaridad);
     }
 }
