@@ -9,16 +9,37 @@ package Personal;
  *
  * @author Usuario
  */
-public class Empleado {
-    protected String nombre,apellido,genero,escolaridad,direccion,puesto,telefono;
+import java.util.Calendar;
+
+public class Empleado extends Usuario {
+
+    protected String nombre;
+    protected String apellidos;
+    protected Calendar fechaNacimiento;
+    protected String genero;
+    protected String escolaridad;
+    protected String direccion;
     protected float salario;
-    //FechaNacimento
+    protected String puesto;
+    protected String telefono;
+
+    public Empleado(String nombre, String apellidos, Calendar fechaNacimiento, 
+            String genero, String escolaridad, String direccion, float salario, 
+            String puesto, String telefono, String nombreUsuario, String constraseña, Identificador id) {
+        
+        super(nombreUsuario, constraseña,id);
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+        this.genero = genero;
+        this.escolaridad = escolaridad;
+        this.direccion = direccion;
+        this.salario = salario;
+        this.puesto = puesto;
+        this.telefono = telefono;
+    }
     
     public void mostrarMenu(){
         
     }
-    public void verInformacionPersonal(){
-        
-    }
-    
 }
