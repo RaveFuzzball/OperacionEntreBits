@@ -25,7 +25,7 @@ public class EmpleadoOrdinario extends Empleado{
         int opcionSeleccionada;
         do {
             System.out.println("¿Que desea hacaer?");
-            System.out.println("1.Solicitar cambio de datos personales \n2.Solicitar vacaciones");
+            System.out.println("1.Solicitar cambio de datos personales \n2.Solicitar vacaciones \n3.Regresar");
             System.out.println("Opcion seleccionada: ");
             Scanner opcion = new Scanner(System.in);
             opcionSeleccionada = opcion.nextInt();
