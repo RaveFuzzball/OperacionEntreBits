@@ -10,5 +10,15 @@ package Personal;
  * @author Usuario
  */
 public class Empleado {
+    protected String nombre,apellido,genero,escolaridad,direccion,puesto,telefono;
+    protected float salario;
+    //FechaNacimento
+    
+    public void mostrarMenu(){
+        
+    }
+    public void verInformacionPersonal(){
+        
+    }
     
 }
