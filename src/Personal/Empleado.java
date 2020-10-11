@@ -54,5 +54,5 @@ public abstract class Empleado extends Usuario {
         }
     }
   
-    public abstract String realizarOperacion(int operacionSeleccionada);
+    public abstract String realizarOperacion(int operacionSeleccionada,Empleado TipoEmpleado);
 }
