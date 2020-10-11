@@ -21,20 +21,36 @@ public class Operador extends Empleado {
     }
 
     @Override
-    public String realizarOperacion(int OperacionSelecionada){
+    public String realizarOperacion(int OperacionSelecionada,Empleado em){
         switch(OperacionSelecionada){
             case 1:
-                return "Viendo datos del empleado";
+                return this.verDatosEmpleado(em);
             case 2:
-                return "Viendo informe del trabajador";
+                return this.verInformeTrabajador(em);
             case 3:
-                return "Solicitando cambio de tienda";
+                return this.solicitarCambioTienda(em);
             case 4:
-                return "Asignando vacaciones";
+                return this.asignarVacaiones(em);
             case 5:
-                return "Dando de alta";
+                return this.darAlta(em);
             default:
                 return "Operacion Invalida";
         }
+    }
+    
+    public String verDatosEmpleado(Empleado em){
+        return "Viendo datos del empleado";
+    }
+    public String verInformeTrabajador(Empleado em){
+        return "Viendo informe del trabajador";
+    }
+     public String solicitarCambioTienda(Empleado em){
+        return "Solicitando cambio de tienda";
+    }
+      public String asignarVacaiones(Empleado em){
+        return "Asignando vacaciones";
+    }
+       public String darAlta(Empleado em){
+        return "Dando de alta";
     }
 }
