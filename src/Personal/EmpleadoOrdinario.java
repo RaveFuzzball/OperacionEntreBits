@@ -20,14 +20,20 @@ public class EmpleadoOrdinario extends Empleado{
     }
 
      @Override
-    public String realizarOperacion(int OperacionSelecionada){
+    public String realizarOperacion(int OperacionSelecionada,Empleado em){
         switch(OperacionSelecionada){
             case 1:
-                return "Solicitando vacaciones";
+                return this.solicitarVacaciones(em);
             case 2:
-                return "Solicitando cambio de datos personales";
+                return this.solicitarCambioDeDatosPersonales(em);
             default:
                 return "Operacion Invalida";
         }
+    }
+    public String solicitarVacaciones(Empleado e){
+        return "Solicitando vacaciones";
+    }
+    public String solicitarCambioDeDatosPersonales(Empleado e){
+        return "Solicitando cambio de datos personales";
     }
 }
