@@ -6,7 +6,6 @@
 package Personal;
 
 import java.util.Calendar;
-import java.util.Scanner;
 
 /**
  *
@@ -14,7 +13,7 @@ import java.util.Scanner;
  */
 public class Operador extends Empleado {
 
-    static int numOperadores;
+    public static int numOperadores;
 
     public Operador(String nombre, String apellidos,Calendar fechaNacimiento, String genero, String escolaridad, String direccion, float salario, String puesto, String telefono, String nombreUsuario, String constraseña,Identificador id) {
         super(nombre, apellidos,fechaNacimiento, genero, escolaridad, direccion, salario, puesto, telefono, nombreUsuario, constraseña, id);
@@ -22,50 +21,20 @@ public class Operador extends Empleado {
     }
 
     @Override
-    public void mostrarMenu() {
-        int opcionSeleccionada;
-        do {
-            System.out.println("¿Que desea hacaer?");
-            System.out.println("1.Ver Informe de Trabajador \n2.Ver datos del empleado \n3.Solicitar Cambio de Tienda \n4.Asignar Vacaciones \n5.Dar de alta \n6.Regresar");
-            System.out.println("Opcion seleccionada: ");
-            Scanner opcion = new Scanner(System.in);
-            opcionSeleccionada = opcion.nextInt();
-            switch (opcionSeleccionada) {
-                case 1:
-                    this.verInformeTrabajador();
-                    break;
-                case 2:
-                    this.verDatosEmpleado();
-                    break;
-                case 3:
-                    this.solicitarCambioDeTieda();
-                    break;
-                case 4:
-                    this.asignarVacaciones();
-                    break;
-                case 5:
-                    this.darAlta();
-                    break;
-                case 6:
-                    break;
-                default:
-                    System.out.println("Opcion no disponible");
-            }
-        } while (opcionSeleccionada !=6 );
-    }
-    private void verInformeTrabajador(){
-        System.out.println("Esta viendo el informe del trabajador");
-    }
-    private void verDatosEmpleado(){
-        System.out.println("Esta viendo los datos del empleado");
-    }
-    private void solicitarCambioDeTieda(){
-        System.out.println("Esta solicitando un cambio de tienda");
-    }
-    private void asignarVacaciones(){
-        System.out.println("Esta asignando vacaciones");
-    }
-    private void darAlta(){
-        System.out.println("Esta dando de alta");
+    public String realizarOperacion(int OperacionSelecionada){
+        switch(OperacionSelecionada){
+            case 1:
+                return "Viendo datos del empleado";
+            case 2:
+                return "Viendo informe del trabajador";
+            case 3:
+                return "Solicitando cambio de tienda";
+            case 4:
+                return "Asignando vacaciones";
+            case 5:
+                return "Dando de alta";
+            default:
+                return "Operacion Invalida";
+        }
     }
 }
